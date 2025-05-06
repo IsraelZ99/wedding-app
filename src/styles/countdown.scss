@@ -1,0 +1,72 @@
+@use "base-theme.module";
+
+$white: #f6f4f3;
+$dark: #183059;
+
+$daysBackgroundColor: #ef2f3c;
+$hoursBackgroundColor: #f6f4f3;
+$minutesBackgroundColor: #276fbf;
+$secondsBackgroundColor: #f0a202;
+
+$star: polygon(
+  50% 0%,
+  61% 35%,
+  98% 35%,
+  68% 57%,
+  79% 91%,
+  50% 70%,
+  21% 91%,
+  32% 57%,
+  2% 35%,
+  39% 35%
+);
+
+#countdown-container {
+  position: relative;
+  margin: auto;
+  overflow: hidden;
+  width: 100%;
+  height: 100%;
+  padding-left: 0.5rem;
+}
+
+#countdown-timer {
+  color: $white;
+  text-align: center;
+  text-transform: uppercase;
+  font-size: 0.5em;
+  font-family: base-theme.$primaryFontFamily;
+}
+
+.countdown-days,
+.countdown-hours,
+.countdown-minutes,
+.countdown-seconds {
+  display: inline-block;
+  padding: 0.6em;
+  width: 5em;
+  border-radius: 0.4em;
+  margin-left: 0.2em;
+}
+
+.countdown-days {
+  background: $daysBackgroundColor;
+}
+
+.countdown-hours {
+  background: $hoursBackgroundColor;
+  color: $dark;
+}
+
+.countdown-minutes {
+  background: $minutesBackgroundColor;
+}
+
+.countdown-seconds {
+  background: $secondsBackgroundColor;
+}
+
+.countdown-numbers {
+  color: $dark;
+  font-size: 2em;
+}

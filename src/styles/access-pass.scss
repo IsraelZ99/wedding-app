@@ -1,0 +1,157 @@
+@use "base-theme.module";
+
+#access-pass {
+  display: flex;
+  flex-direction: column;
+  justify-content: space-evenly;
+}
+
+#access-pass-information {
+  display: flex;
+  flex-direction: column;
+
+  #access-pass-text-pass {
+    margin: 3% 0;
+    padding: 0;
+    font-family: base-theme.$secondaryFontFamily;
+  }
+
+  #reservation-container {
+    display: flex;
+    flex-direction: column;
+
+    #reservation-text-for {
+      margin: 0.5em 0;
+      font-size: 0.9em;
+    }
+
+    #names {
+      display: flex;
+      flex-direction: row;
+      flex-wrap: wrap;
+      align-self: center;
+      justify-content: space-evenly;
+      width: 100%;
+      font-family: base-theme.$secondaryFontFamily;
+
+      .name-icon-button {
+        margin: 0.3em 0;
+      }
+    }
+  }
+}
+
+#access-pass-confirmation-container {
+  height: 35%;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-evenly;
+
+  #access-pass-confirmation {
+    font-size: 0.9em;
+    margin: 0 2em;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    animation: showConfirmAssistance 1s linear;
+
+    :nth-child(2) {
+      font-size: 0.8em;
+      padding: 0.2em 0;
+      font-style: italic;
+    }
+
+    :nth-child(3) {
+      width: 70%;
+      align-self: center;
+    }
+  }
+
+  #access-pass-not-allowed-message {
+    display: none;
+  }
+
+  #access-pass-not-allowed-message.showMessage {
+    display: block;
+    position: absolute;
+    width: 85%;
+    z-index: 30;
+
+    div {
+      position: relative;
+      background-color: base-theme.$secondaryColor;
+      border: 0.4px solid base-theme.$primaryColor;
+      border-radius: 0.5em;
+      animation: showMessageAnimation 0.7s linear;
+
+      p {
+        padding: 0.5em 0;
+        text-align: center;
+        font-size: 0.8em;
+      }
+    }
+  }
+}
+
+@keyframes showMessageAnimation {
+  from {
+    bottom: -2rem;
+  }
+  to {
+    bottom: 0;
+  }
+}
+
+@keyframes showConfirmAssistance {
+  from {
+    opacity: 0;
+  }
+  to {
+    opacity: 1;
+  }
+}
+
+.access-pass-modal-icon-container {
+  flex: 3 2 auto;
+  text-align: center;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+
+  .access-pass-modal-icon {
+    width: 4em;
+    height: 4em;
+  }
+}
+
+.access-pass-modal-text {
+  flex: 2 1 auto;
+  text-align: center;
+}
+
+.access-pass-modal-status-changed-text {
+  flex: 2 1 auto;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-evenly;
+  text-align: center;
+
+  :nth-child(2) {
+    font-weight: 700;
+    font-style: italic;
+  }
+}
+
+.access-pass-modal-extra-button {
+  align-self: center;
+  flex: 3 2 auto;
+}
+
+@media (min-height: 1000px) {
+  #names {
+    width: 80% !important;
+    .name-icon-button {
+      margin: 0.3em 0.7em !important;
+    }
+  }
+}

@@ -1,0 +1,67 @@
+@use "base-theme.module";
+
+p,
+section,
+div,
+span {
+  margin: 0;
+  padding: 0;
+  font-size: 1em;
+}
+
+.swiper {
+  width: 100%;
+  height: 100%;
+}
+
+.loading {
+  min-width: 100vw;
+  min-height: 100vh;
+  background: base-theme.$spinnerBackground;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.wedding-main-container {
+  animation: appears 1s linear;
+  font-family: base-theme.$primaryFontFamily;
+}
+
+.swiper-pagination-bullet {
+  background-color: transparent;
+  display: inline-block;
+  width: 0.8rem;
+  height: 0.8rem;
+}
+
+.swiper-pagination-bullet-active-next,
+.swiper-pagination-bullet-active-next-next {
+  background-color: transparent;
+}
+
+.swiper-pagination-bullet-active-prev {
+  background-color: transparent;
+}
+
+@keyframes appears {
+  from {
+    opacity: 0;
+  }
+  to {
+    opacity: 1;
+  }
+}
+
+.spinner {
+  animation: spin 2s infinite linear;
+}
+
+@keyframes spin {
+  from {
+    transform: rotate(0deg);
+  }
+  to {
+    transform: rotate(360deg);
+  }
+}

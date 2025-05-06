@@ -1,0 +1,144 @@
+@use "base-theme.module";
+
+dialog {
+  padding: 0;
+  font-family: base-theme.$primaryFontFamily;
+}
+
+.modal {
+  border: none;
+  border-radius: 8px;
+}
+
+@keyframes slide-in-from-top {
+  0% {
+    transform: translateY(-15%);
+    opacity: 0;
+  }
+  100% {
+    transform: translateY(0);
+    opacity: 1;
+  }
+}
+
+.modal[open] {
+  animation: slide-in-from-top 0.4s ease-out;
+
+  display: flex;
+  flex-direction: column;
+  height: 40vh;
+  width: 90vw;
+
+  .modal-header {
+    flex: 2 auto;
+    display: flex;
+    flex-direction: row;
+    background-color: base-theme.$primaryColor;
+
+    .modal-header-text {
+      flex: 11;
+      align-self: center;
+      text-align: left;
+      padding-left: 10%;
+      font-size: 1.1rem;
+      color: #fff;
+    }
+
+    .modal-header-close-container {
+      flex: 1;
+      border: 0;
+      appearance: none;
+      background: base-theme.$primaryColor;
+      height: 60%;
+      align-self: center;
+    }
+  }
+
+  .modal-body {
+    flex: 4 3 auto;
+    align-self: center;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    max-width: 90%;
+  }
+
+  .modal-footer {
+    display: flex;
+    flex-direction: column;
+    flex: 2 2 auto;
+    align-items: flex-end;
+    .modal-footer-line {
+      width: 100%;
+      background-color: rgb(189, 189, 189);
+      height: 0.01em;
+    }
+    .modal-footer-close-button-container {
+      display: flex;
+      flex-direction: column;
+      justify-content: center;
+      height: 100%;
+      padding: 0 10%;
+
+      .modal-footer-close-button {
+        border: 1px base-theme.$primaryColor solid;
+        border-radius: 5%;
+        height: 60%;
+        padding: 0 1em;
+        font-weight: 700;
+        color: base-theme.$primaryColor;
+        appearance: none;
+        background-color: transparent;
+      }
+    }
+  }
+
+  ::-webkit-scrollbar {
+    width: 0.7em;
+  }
+
+  ::-webkit-scrollbar-track {
+    border-radius: 10px;
+    background: #eee;
+  }
+
+  ::-webkit-scrollbar-thumb {
+    border-radius: 10px;
+    background: base-theme.$primaryColor;
+  }
+  ::-webkit-scrollbar-thumb:window-inactive {
+    background: base-theme.$secondaryColor;
+  }
+}
+
+.modal::backdrop {
+  background: rgba(0, 0, 0, 0.9);
+}
+
+// @media (max-height: 700px) {
+//   .modal[open] {
+//     // .modal-footer {
+//     //   flex: 4 1 auto !important;
+//     // }
+//   }
+// }
+
+@media (min-height: 1000px) {
+  .modal[open] {
+    height: 30vh;
+    width: 60vw;
+    .modal-header-text {
+      padding-left: 5% !important;
+    }
+  }
+}
+
+@media (min-width: 1200px) {
+  .modal[open] {
+    height: 45vh;
+    width: 30vw;
+    .modal-header-text {
+      padding-left: 5% !important;
+    }
+  }
+}

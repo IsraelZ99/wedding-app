@@ -1,0 +1,16 @@
+.swiper-slide {
+  /* TODO: Change the styling */
+  text-align: center;
+  font-size: 18px;
+  background: #fff;
+
+  display: flex;
+  flex-direction: column;
+}
+
+.swiper-slider-content-container {
+  height: 50%;
+  align-self: center;
+  display: flex;
+  justify-content: center;
+}

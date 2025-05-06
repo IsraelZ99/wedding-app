@@ -1,0 +1,10 @@
+version: "3.8"
+services:
+  wedding-app:
+    build: .
+    container_name: wedding-app
+    ports:
+      - "7000:80"
+    environment:
+      - VITE_WHATSAPP_MONSE_NUMBER=525583729358
+      - VITE_WHATSAPP_ISRAEL_NUMBER=525536573017

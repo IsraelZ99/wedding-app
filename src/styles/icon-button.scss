@@ -1,0 +1,27 @@
+@use "base-theme.module";
+
+#icon-button {
+  display: flex;
+  flex-direction: row;
+  position: relative;
+
+  #button {
+    border: 0.15em solid base-theme.$primaryColor;
+    border-radius: 2.5em;
+    padding: 0.4em 1.5em 0.4em 4em;
+    align-self: center;
+    background: base-theme.$secondaryColor;
+    z-index: 1;
+    font-size: 0.8em;
+    width: 60%;
+  }
+
+  .icon {
+    position: absolute;
+    border: 0.15em solid base-theme.$primaryColor;
+    border-radius: 60%;
+    padding: 0.3em;
+    background: base-theme.$secondaryColor;
+    z-index: 3;
+  }
+}

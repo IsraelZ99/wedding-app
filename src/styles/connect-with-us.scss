@@ -1,0 +1,27 @@
+@use "base-theme.module";
+
+#connect-with-us {
+  display: flex;
+  flex-direction: column;
+  justify-content: space-evenly;
+  height: 96%;
+  gap: 0%;
+  transition: gap 0.5s;
+}
+
+#connect-with-us.playing-audio {
+  gap: 30%;
+}
+
+#connect-with-us-phrase p {
+  padding: 0 2em;
+  font-size: 1.3rem;
+  font-family: base-theme.$secondaryFontFamily;
+}
+
+#connect-with-us-song p {
+  padding: 0 2em;
+  margin-top: 3rem;
+  font-size: 1.1rem;
+  font-family: base-theme.$secondaryFontFamily;
+}

@@ -1,0 +1,29 @@
+@font-face {
+  font-family: "Baby Child";
+  src: local("Baby Child"), url(/fonts/BabyChild.ttf), format("opentype");
+}
+
+@font-face {
+  font-family: "Playfair Display";
+  src: local("Playfair Display"), url(/fonts/PlayfairDisplay.ttf),
+    format("opentype");
+}
+
+$primaryFontFamily: "Playfair Display";
+$secondaryFontFamily: "Baby Child";
+
+$primaryColor: rgb(99, 151, 151);
+$secondaryColor: rgb(233, 247, 250);
+$thirdColor: #d2d2d2;
+$buttonColor: #55acee;
+$whiteColor: #fff;
+$spinnerBackground: #181818;
+$blackColor: #1f1f1f;
+$grayColor: #252b32;
+
+:export {
+  primary: $primaryColor;
+  white: $whiteColor;
+  spinnerBackground: $spinnerBackground;
+  black: $blackColor;
+}

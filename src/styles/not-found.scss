@@ -1,0 +1,138 @@
+@use "base-theme.module";
+
+.not-found-container {
+  font-family: base-theme.$primaryFontFamily;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  min-height: 100vh;
+  background: hsla(186, 33%, 94%, 1);
+
+  background: linear-gradient(
+    90deg,
+    hsla(186, 33%, 94%, 1) 0%,
+    hsla(216, 41%, 79%, 1) 100%
+  );
+
+  background: -moz-linear-gradient(
+    90deg,
+    hsla(186, 33%, 94%, 1) 0%,
+    hsla(216, 41%, 79%, 1) 100%
+  );
+
+  background: -webkit-linear-gradient(
+    90deg,
+    hsla(186, 33%, 94%, 1) 0%,
+    hsla(216, 41%, 79%, 1) 100%
+  );
+
+  .container {
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+    position: relative;
+  }
+  .card {
+    width: 90vw;
+    height: 35vh;
+    margin: 0;
+  }
+
+  #card1 section {
+    width: 90%;
+    height: 80%;
+    position: relative;
+    left: 37%;
+    right: 35%;
+    border-radius: 10px;
+    object-fit: cover;
+    object-position: center center;
+    margin: 0 auto;
+  }
+  h2 {
+    text-align: center;
+  }
+  .container-text {
+    padding: 2rem 1rem;
+    height: 40%;
+    background-color: white;
+  }
+  p {
+    text-align: left;
+  }
+  #card1 {
+    display: flex;
+    flex-direction: column;
+    justify-content: flex-start;
+    align-content: center;
+    width: 100%;
+    height: 100%;
+    border-radius: 20px;
+    overflow: hidden;
+    box-shadow: 0 8px 32px 0 rgba(31, 38, 135, 0.37);
+    backdrop-filter: blur(8.5px);
+    -webkit-backdrop-filter: blur(8.5px);
+  }
+
+  .main-container-text {
+    margin-top: 1rem;
+
+    #main-container-tex-first,
+    #main-container-tex-second {
+      margin-left: 1rem;
+    }
+  }
+
+  .firstPart {
+    display: flex;
+    justify-content: center;
+    align-content: center;
+    flex-flow: column;
+    padding: 0 0 2em 0;
+    height: 40%;
+  }
+  #rowOne h2 {
+    color: white;
+  }
+  #overlay {
+    position: absolute;
+    top: 0;
+    left: 0;
+    z-index: 1;
+    clip-path: circle(var(--circle-size) at var(--x) var(--y));
+    transition: clip-path 0.1s;
+    opacity: 0;
+  }
+  #rowOne {
+    background-color: #141312;
+  }
+  #rowTwo {
+    background: #0be477;
+  }
+
+  .btn {
+    display: flex;
+    padding-top: 1rem;
+    justify-content: space-evenly;
+  }
+
+  .read-more {
+    background-color: black;
+    margin-top: 2rem;
+    padding: 0.7em;
+    border-radius: 30px;
+    align-self: center;
+  }
+  .svg_icon {
+    border-radius: 100%;
+    width: 15px;
+    height: 15px;
+    padding: 0.5em;
+  }
+
+  .black {
+    background-color: #141312;
+    color: white;
+    fill: white;
+  }
+}
