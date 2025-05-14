@@ -4,12 +4,14 @@ import "../../styles/radio-group-field.scss";
 
 interface RadioFieldProps {
   data: RadioGroupData[];
+  labelStyles?: React.CSSProperties;
   display: "horizontal" | "vertical";
   onClickElement?: (id: string) => void;
 }
 
 const RadioGroupField: React.FC<RadioFieldProps> = ({
   data,
+  labelStyles,
   display,
   onClickElement,
 }) => {
@@ -22,7 +24,7 @@ const RadioGroupField: React.FC<RadioFieldProps> = ({
           onClick={() => (onClickElement ? onClickElement(element.text) : {})}
         >
           <div className="fake-input-container">
-            <label>{element.text}</label>
+            <label style={labelStyles}>{element.text}</label>
             <div className="check">
               <div className="inside"></div>
             </div>

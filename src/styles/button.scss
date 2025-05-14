@@ -5,12 +5,13 @@
   text-transform: capitalize;
   color: #fff;
   border: 0 none;
-  border-radius: 4%;
+  border-radius: 1rem;
   font-weight: 500;
   line-height: 1.3;
   appearance: none;
   height: 4em;
-  box-shadow: 0px 5px 0px 0px #3C93D5;
-  background: base-theme.$buttonColor;
+  box-shadow: 0px 0.3rem 0px 0px base-theme.$fifthColor;
+  background: base-theme.$primaryColor;
   font-family: base-theme.$primaryFontFamily;
+  font-size: 0.9rem;
 }

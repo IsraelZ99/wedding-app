@@ -81,7 +81,9 @@ export default function SwipperContainer() {
               pagination={{
                 clickable: true,
                 renderBullet: (_, className) => {
-                  return `<span class="${className}">❤️</span>`;
+                  return `<span class="${className}">
+                            <img src="/icons/valentines.webp" alt="bullet" style="width: 20px; height: 20px;" />
+                          </span>`;
                 },
               }}
               noSwiping
@@ -90,7 +92,7 @@ export default function SwipperContainer() {
             >
               <SwiperSlide>
                 <SwiperSlideContent
-                  imageData={{ imageSrc: FIRST_IMAGE, altText: "MYTEXT" }}
+                  imageData={{ imageSrc: FOURH_IMAGE, altText: "MYTEXT" }}
                   component={{ isComponentAtTop: true }}
                 >
                   <Presentation />
@@ -106,7 +108,7 @@ export default function SwipperContainer() {
               </SwiperSlide>
               <SwiperSlide>
                 <SwiperSlideContent
-                  imageData={{ imageSrc: SECOND_IMAGE, altText: "MYTEXT" }}
+                  imageData={{ imageSrc: FIRST_IMAGE, altText: "MYTEXT" }}
                   component={{ isComponentAtTop: true }}
                 >
                   <EventInformation />
@@ -122,7 +124,7 @@ export default function SwipperContainer() {
               </SwiperSlide>
               <SwiperSlide>
                 <SwiperSlideContent
-                  imageData={{ imageSrc: FOURH_IMAGE, altText: "MYTEXT" }}
+                  imageData={{ imageSrc: SECOND_IMAGE, altText: "MYTEXT" }}
                   component={{ isComponentAtTop: false }}
                 >
                   <AccessPass />

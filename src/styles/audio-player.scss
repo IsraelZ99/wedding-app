@@ -1,7 +1,8 @@
-$background: #deedf6;
-$fontColor: #3f3e3ef5;
-$seekBarBackground: #8b97dc;
-$seekBackgroundProgress: #3b53dd;
+@use "base-theme.module";
+
+$background: base-theme.$fourthColorLighted;
+$seekBarBackground: base-theme.$fifthColor;
+$seekBackgroundProgress: base-theme.$thirdColor;
 
 #audio-player {
   width: 80%;
@@ -32,13 +33,13 @@ $seekBackgroundProgress: #3b53dd;
 }
 
 #album-name {
-  color: #54576f;
+  color: base-theme.$blackColor;
   font-size: 17px;
   font-weight: bold;
 }
 
 #track-name {
-  color: #acaebd;
+  color: base-theme.$grayColor;
   font-size: 13px;
   margin: 2px 0 3px 0;
 }
@@ -59,7 +60,7 @@ $seekBackgroundProgress: #3b53dd;
 
 #current-time,
 #track-length {
-  color: $fontColor;
+  color: base-theme.$secondaryColor;
   font-size: 0.75rem;
   background-color: #deedf6;
   border-radius: 10px;
@@ -68,7 +69,7 @@ $seekBackgroundProgress: #3b53dd;
 
 #track-time.active #current-time,
 #track-time.active #track-length {
-  color: #515ef4;
+  color: base-theme.$secondaryColor;
   background-color: transparent;
 }
 

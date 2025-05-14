@@ -11,10 +11,11 @@ import {
 } from "../services/InvitationService";
 import { RadioGroupData } from "../types/common";
 import RadioGroupField from "./common/RadioGroupField";
-import "../styles/form-input.scss";
-import { FcInspection } from "react-icons/fc";
 import { FirebaseInvitation } from "../types/api";
 import { createPayload } from "../util/InvitationUtils";
+import { GiLoveLetter } from "react-icons/gi";
+import theme from "../styles/_base-theme.module.scss";
+import "../styles/form-input.scss";
 
 const FormInput: React.FC = () => {
   const { state, setWishes, setInvitationInformation } = useInvitationContext();
@@ -80,7 +81,7 @@ const FormInput: React.FC = () => {
       (guest) => guest.isChecked
     )?.text;
     if (!guestWhoIsSendingWishes) return;
-    setBtnWishes("Enviando...")
+    setBtnWishes("Enviando...");
     await sendWishesByGuestName(
       state.invitation.id,
       guestWhoIsSendingWishes,
@@ -118,6 +119,7 @@ const FormInput: React.FC = () => {
         <div id="form-input-selection-container">
           <RadioGroupField
             data={inputNames}
+            labelStyles={{ fontSize: "1.1rem" }}
             display="vertical"
             onClickElement={handleSelectElement}
           />
@@ -131,7 +133,7 @@ const FormInput: React.FC = () => {
         <div id="form-input-modal-textarea-container">
           <textarea
             id="form-input-modal-textarea"
-            placeholder="Escribe aquí el mensaje que quieras darnos"
+            placeholder="Escribe aquí"
             value={wishText}
             onChange={handleChangeWishText}
           />
@@ -139,7 +141,7 @@ const FormInput: React.FC = () => {
         <div id="form-input-modal-send-container">
           <Button
             onClick={handleSendWishes}
-            styles={{ height: "2em", width: "80%" }}
+            styles={{ height: "2.5em", width: "80%" }}
           >
             {btnWishes}
           </Button>
@@ -147,7 +149,10 @@ const FormInput: React.FC = () => {
       </Modal>
       <Modal ref={confirmationModal} headerText="Agredecimiento">
         <div className="form-input-modal-confirmation-icon-container">
-          <FcInspection className="form-input-modal-confirmation-icon" />
+          <GiLoveLetter
+            className="form-input-modal-confirmation-icon"
+            color={`${theme.fourth}`}
+          />
         </div>
         <p className="form-input-modal-confirmation-text">
           Hemos recibido con exito tus deseos, te agradecemos por tomarte el
@@ -155,26 +160,28 @@ const FormInput: React.FC = () => {
         </p>
       </Modal>
       <section id="form-input-lodgment">
-        <p>¿Quieres hospejade para el evento?</p>
+        <p>¿Quieres hospejade?</p>
         <p>Puedes contactarnos vía Whatsapp.</p>
         <span id="form-input-contacts">
           <IconButton
             IconComponent={IoLogoWhatsapp}
             styles={{
-              icon: { props: { size: "1.5rem" }, styles: { top: "0em" } },
-              button: { width: "60%" },
+              icon: { props: { size: "1.6rem" }, styles: { top: "0em" } },
+              button: { width: "60%", letterSpacing: "0.2rem" },
             }}
+            type="secondary"
             onButtonClick={handleSendMessageToMonse}
             text="Monse"
           />
           <IconButton
             IconComponent={IoLogoWhatsapp}
             styles={{
-              icon: { props: { size: "1.5rem" }, styles: { top: "0em" } },
-              button: { width: "60%" },
+              icon: { props: { size: "1.6rem" }, styles: { top: "0em" } },
+              button: { width: "60%", letterSpacing: "0.2rem" },
             }}
+            type="secondary"
             onButtonClick={handleSendMessageToIsrael}
-            text="Israel"
+            text="Znitch"
           />
         </span>
       </section>

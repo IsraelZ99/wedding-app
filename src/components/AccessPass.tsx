@@ -5,7 +5,8 @@ import IconButton from "./common/IconButton";
 import { BsFillPersonCheckFill } from "react-icons/bs";
 
 import Button from "./common/Button";
-import { FcOk, FcQuestions } from "react-icons/fc";
+import { FcOk } from "react-icons/fc";
+import { RiCalendarCloseFill } from "react-icons/ri";
 import { useInvitationContext } from "../store/wedding-context";
 import {
   getInviteInformation,
@@ -20,7 +21,7 @@ import theme from "../styles/_base-theme.module.scss";
 import "../styles/access-pass.scss";
 
 const AccessPass: React.FC = () => {
-  const deadline = new Date("2025-06-30T23:59:59");
+  const deadline = new Date("2025-07-19T23:59:59");
   // const deadline = new Date("2025-03-30T23:59:59");
   const { state, setInvitationStatus, setInvitationInformation } =
     useInvitationContext();
@@ -131,7 +132,7 @@ const AccessPass: React.FC = () => {
           <p>Cierra esta ventana para actualizar el estatus de la asistencia</p>
         </div>
       </Modal>
-      <Modal ref={confirmationDialog} headerText="Confirmacion">
+      <Modal ref={confirmationDialog} headerText="Confirmación">
         <div className="access-pass-modal-icon-container">
           <FcOk className="access-pass-modal-icon" />
         </div>
@@ -140,25 +141,34 @@ const AccessPass: React.FC = () => {
           Estamos muy contentos de que puedan acompañarnos.
         </p>
       </Modal>
-      <Modal ref={cancelDialog} headerText="Cancelacion">
+      <Modal ref={cancelDialog} headerText="Cancelación">
         <div className="access-pass-modal-icon-container">
-          <FcQuestions className="access-pass-modal-icon" />
+          <RiCalendarCloseFill
+            className="access-pass-modal-icon"
+            color={`${theme.fourth}`}
+          />
         </div>
         <p className="access-pass-modal-text">
-          ¿Estas seguro de cancelar la asistencia a nuestra boda?
+          ¿Estas seguro de cancelar la asistencia?
         </p>
         <div className="access-pass-modal-extra-button">
-          <Button onClick={handleCancelAttendance} styles={{ height: "3em" }}>
-            Si, lo siento
+          <Button
+            onClick={handleCancelAttendance}
+            styles={{ height: "3em", padding: "0em 1.5em" }}
+          >
+            Aceptar
           </Button>
         </div>
       </Modal>
       <Modal ref={afterCancelDialog} headerText="Condolencias">
         <div className="access-pass-modal-icon-container">
-          <FaRegSadCry className="access-pass-modal-icon" color={`${theme.black}`} />
+          <FaRegSadCry
+            className="access-pass-modal-icon"
+            color={`${theme.black}`}
+          />
         </div>
         <p className="access-pass-modal-text">
-          Lamentamos mucho que no puedas acompañarnos a nuestra boda.
+          Lamentamos mucho que no puedas acompañarnos.
         </p>
       </Modal>
       <section id="access-pass-information">
@@ -175,14 +185,16 @@ const AccessPass: React.FC = () => {
                   IconComponent={BsFillPersonCheckFill}
                   styles={{
                     icon: {
-                      props: { size: "1.5rem" },
+                      props: { size: "1.6rem" },
                       styles: { top: "0em" },
                     },
                     button: {
                       width: "5em",
-                      padding: "0.4em 2.5em 0.4em 2.5em",
+                      padding: "0.4em 2em 0.4em 3em",
+                      letterSpacing: "0.1rem",
                     },
                   }}
+                  type="secondary"
                   onButtonClick={() => {}}
                   text={name}
                 />
@@ -194,9 +206,8 @@ const AccessPass: React.FC = () => {
       <section id="access-pass-confirmation-container">
         {!showMessage && (
           <section id="access-pass-confirmation">
-            <p>Su presencia es muy importante para nosotros</p>
             <p>
-              Confirmen su asistencia antes del <b>30 de junio del 2025.</b>
+             Último dia para confirmar asistencia, <b>19 de julio del 2025.</b>
             </p>
             <Button onClick={handleModal}>{btnText}</Button>
           </section>
@@ -207,7 +218,11 @@ const AccessPass: React.FC = () => {
         >
           <div>
             <p>
-              ¡Lo lamentamos pero ya paso la fecha limite para confirmar! 🥺
+              ¡Lo lamentamos pero ya paso la fecha limite para{" "}
+              {state.invitation.isInvitationConfirmed
+                ? "cancelar"
+                : "confirmar"}
+              ! 🥺
             </p>
           </div>
         </section>

@@ -1,23 +1,27 @@
-import "../styles/itinerary.scss";
 import spouseIcon from "/spouse-icon.png";
 import { FaRegHeart } from "react-icons/fa";
+import theme from "../styles/_base-theme.module.scss";
+import "../styles/itinerary.scss";
 
 const Itinerary: React.FC = () => {
   const itineraryData = [
     {
       id: 1,
-      header: "Recepcion",
+      header: "Recepción",
       instruction: "05:00 pm",
+      className: "reception",
     },
     {
       id: 2,
-      header: "Ceremonia Civil",
+      header: "Ceremonia",
       instruction: "05:30 pm",
+      className: "start",
     },
     {
       id: 3,
-      header: "Termino",
+      header: "Término",
       instruction: "10:00 pm",
+      className: "ending",
     },
   ];
   return (
@@ -27,26 +31,35 @@ const Itinerary: React.FC = () => {
         <div id="icon-container">
           <img src={spouseIcon} />
         </div>
-        <p id="first-instruction">FORMAL</p>
-        <div id="second-instruction-container">
-          <p>Hombres: Traje y zapatos</p>
-          <p>Mujeres: Vestido largo</p>
-        </div>
+        <p id="first-instruction">Semi-formal / Cocktail</p>
+        {/* <div id="second-instruction-container">
+          <p>
+            <b>Hombres:</b> Traje corte basico, colores neutros
+          </p>
+          <p>
+            <b>Mujeres:</b> Vestidos corte midi o pantalon a medida, colores
+            neutros
+          </p>
+        </div> */}
         <div id="important-instruction">
           <span id="important-instruction-asterisk">*</span>
-          <p>Color blanco y similares se reservan para la novia</p>
+          <p>Color blanco y similares se reservan para la novia.</p>
         </div>
       </section>
       <section id="information-timeline">
         <ul>
           {itineraryData.map((data) => (
             <li key={data.id}>
-              <div>
+              <div className={data.className}>
                 <p>{data.header}</p>
                 <p>{data.instruction}</p>
               </div>
               <span>
-                <FaRegHeart size="30px" className="heart-icon" />
+                <FaRegHeart
+                  size="30px"
+                  className="heart-icon"
+                  color={`${theme.white}`}
+                />
               </span>
             </li>
           ))}

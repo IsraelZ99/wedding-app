@@ -14,6 +14,7 @@ interface IconButtonStylesProps {
 interface IconButtonProps {
   IconComponent: IconType;
   styles: IconButtonStylesProps;
+  type: "primary" | "secondary";
   onButtonClick: () => void;
   text: string;
 }
@@ -22,20 +23,31 @@ const IconButton: React.FC<IconButtonProps> = ({
   IconComponent,
   onButtonClick,
   text,
+  type,
   styles: {
     button: buttonStyles,
     icon: { props: iconProps, styles: iconStyles },
   },
 }) => {
+  let iconColor = "";
+  if (type === "primary") {
+    iconColor = theme.fifth;
+  } else if (type === "secondary") {
+    iconColor = theme.gray;
+  }
   return (
-    <div id="icon-button" role="button" onClick={onButtonClick}>
+    <div
+      className={`icon-button ${type}`}
+      role="button"
+      onClick={onButtonClick}
+    >
       <IconComponent
         {...iconProps}
-        color={`${theme.primary}`}
+        color={iconColor}
         style={iconStyles}
         className="icon"
       />
-      <span id="button" style={buttonStyles}>
+      <span className="button" style={buttonStyles}>
         <p>{text}</p>
       </span>
     </div>

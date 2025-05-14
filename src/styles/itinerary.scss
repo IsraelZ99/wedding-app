@@ -1,13 +1,13 @@
-@use "./base-theme.module";
+@use "base-theme.module";
 
 $dressCodePadding: 5vh;
-$dressCodeContainerHeight: 30vh;
-$informationTimeLineHeight: 50vh;
+$dressCodeContainerHeight: 31vh;
+$informationTimeLineHeight: 45vh;
 
-$lineBackground: #838383;
+$lineBackground: base-theme.$primaryColor;
 
 #itinerary {
-  padding: 0.5em 1em 1em 1em;
+  padding: 0.2em 1em 1em 1em;
   font-size: 0.9em;
 
   #dress-code {
@@ -20,7 +20,8 @@ $lineBackground: #838383;
     h1 {
       margin: 0;
       font-family: base-theme.$secondaryFontFamily;
-      font-size: 1.4em;
+      font-size: 1.6em;
+      letter-spacing: 0.13em;
     }
 
     #icon-container {
@@ -39,15 +40,18 @@ $lineBackground: #838383;
 
     #first-instruction {
       padding-top: 0.5em;
+      font-size: 1.1rem;
     }
 
     #second-instruction-container {
-      padding-top: 0.4em;
+      padding-top: 0.3em;
+      font-size: 0.9rem;
       font-style: italic;
     }
 
     #important-instruction {
-      padding-top: 1em;
+      font-size: 1rem;
+      padding-top: 0.1rem;
       display: flex;
       justify-content: center;
       width: 85vw;
@@ -69,7 +73,7 @@ $lineBackground: #838383;
     color: #fff;
 
     ul {
-      padding: 2em 1em;
+      padding: 0em 1em;
       display: flex;
       flex-direction: column;
       align-items: center;
@@ -87,18 +91,18 @@ $lineBackground: #838383;
           bottom: 0;
           width: 6em;
           padding: 1em;
-          background: base-theme.$primaryColor;
           font-size: 0.8em;
           text-align: right;
 
           :nth-child(1) {
             font-family: base-theme.$secondaryFontFamily;
-            font-size: 1.3em;
+            font-size: 1.5em;
             font-weight: 400;
+            letter-spacing: 0.03rem;
           }
 
           :nth-child(2) {
-            font-size: 1em;
+            font-size: 1.2em;
           }
         }
 
@@ -139,26 +143,44 @@ $lineBackground: #838383;
         top: 25%;
       }
 
-      li:nth-child(odd) div::before {
-        left: -0.9em;
-        border-width: 0.7em 1em 0.7em 0;
-        border-color: transparent base-theme.$primaryColor transparent
-          transparent;
-      }
-
       li:nth-child(even) div {
         right: 2.5em;
         top: 15%;
       }
 
-      li:nth-child(even) div::before {
+      li:nth-child(1) div::before {
+        left: -0.9em;
+        border-width: 0.7em 1em 0.7em 0;
+        border-color: transparent base-theme.$thirdColor transparent transparent;
+      }
+
+      li:nth-child(2) div::before {
         right: -0.9em;
         border-width: 0.7em 0 0.7em 1em;
-        border-color: transparent transparent transparent
-          base-theme.$primaryColor;
+        border-color: transparent transparent transparent base-theme.$fifthColor;
+      }
+
+      li:nth-child(3) div::before {
+        left: -0.9em;
+        border-width: 0.7em 1em 0.7em 0;
+        border-color: transparent base-theme.$secondaryColor transparent
+          transparent;
       }
     }
   }
+}
+
+.reception {
+  background-color: base-theme.$thirdColor;
+}
+
+.start {
+  background-color: base-theme.$fifthColor;
+  color: base-theme.$blackColor !important;
+}
+
+.ending {
+  background-color: base-theme.$secondaryColor;
 }
 
 @media (min-height: 1000px) {

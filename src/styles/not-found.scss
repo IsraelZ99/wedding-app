@@ -1,29 +1,31 @@
 @use "base-theme.module";
 
+$background: base-theme.$fourthColorLighted;
+
 .not-found-container {
   font-family: base-theme.$primaryFontFamily;
   display: flex;
   justify-content: center;
   align-items: center;
   min-height: 100vh;
-  background: hsla(186, 33%, 94%, 1);
+  background: $background;
 
   background: linear-gradient(
     90deg,
-    hsla(186, 33%, 94%, 1) 0%,
-    hsla(216, 41%, 79%, 1) 100%
+    $background 0%,
+    $background 100%
   );
 
   background: -moz-linear-gradient(
     90deg,
-    hsla(186, 33%, 94%, 1) 0%,
-    hsla(216, 41%, 79%, 1) 100%
+    $background 0%,
+    $background 100%
   );
 
   background: -webkit-linear-gradient(
     90deg,
-    hsla(186, 33%, 94%, 1) 0%,
-    hsla(216, 41%, 79%, 1) 100%
+    $background 0%,
+    $background 100%
   );
 
   .container {
@@ -104,7 +106,7 @@
     opacity: 0;
   }
   #rowOne {
-    background-color: #141312;
+    background-color: base-theme.$secondaryColor;
   }
   #rowTwo {
     background: #0be477;

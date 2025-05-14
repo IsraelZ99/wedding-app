@@ -92,6 +92,10 @@ $marginParagraph: 0.3em 0 0.2em 0;
 #event-information-day-container {
   flex: 2;
 
+  .event-information-line {
+    height: 0.16em;
+  }
+
   p {
     font-size: 1.5em;
     font-weight: 900;

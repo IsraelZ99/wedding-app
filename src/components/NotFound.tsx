@@ -27,24 +27,30 @@ const NotFound: React.FC = () => {
               </section>
             </div>
             <div className="main-container-text">
-              <p id="main-container-tex-first">Confirma que sea la invitación correcta.</p>
-              <p id="main-container-tex-second">Para ello, puedes contactarnos via whatsapp.</p>
+              <p id="main-container-tex-first">
+                Confirma que sea la invitación correcta.
+              </p>
+              <p id="main-container-tex-second">
+                Para ello, puedes contactarnos via whatsapp.
+              </p>
               <div className="btn">
                 <IconButton
                   IconComponent={IoLogoWhatsapp}
                   text="Monse"
+                  type="secondary"
                   onButtonClick={handleSendMessageToMonse}
                   styles={{
-                    icon: { props: { size: "0.9rem" }, styles: { top: "0em" } },
+                    icon: { props: { size: "1.4em" }, styles: { top: "0.01em" } },
                     button: { width: "50%" },
                   }}
                 />
                 <IconButton
                   IconComponent={IoLogoWhatsapp}
                   text="Znitch"
+                  type="secondary"
                   onButtonClick={handleSendMessageToIsrael}
                   styles={{
-                    icon: { props: { size: "0.9rem" }, styles: { top: "0em" } },
+                    icon: { props: { size: "1.4em" }, styles: { top: "0.01em" } },
                     button: { width: "50%" },
                   }}
                 />

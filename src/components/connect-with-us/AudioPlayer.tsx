@@ -140,7 +140,7 @@ const AudioPlayer: React.FC<AudioPlayerProps> = ({
                 <div className="song-button" id="play-pause-button">
                   {(isPauseAudio || playerAction == null) && (
                     <IoPlayCircle
-                      color={theme.primary}
+                      color={theme.third}
                       size={"4em"}
                       className="btn-control"
                       onClick={() =>
@@ -150,7 +150,7 @@ const AudioPlayer: React.FC<AudioPlayerProps> = ({
                   )}
                   {isPlayingAudio && (
                     <IoPauseCircle
-                      color={theme.primary}
+                      color={theme.third}
                       size={"4em"}
                       className="btn-control"
                       onClick={() =>

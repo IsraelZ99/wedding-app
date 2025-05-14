@@ -54,9 +54,10 @@ const EventInformation: React.FC = () => {
           <IconButton
             IconComponent={PiMapPinLineBold}
             styles={{
-              icon: { props: { size: "1em" }, styles: { top: "0.2em" } },
-              button: { width: "60%", padding: "0.4em 1.5em 0.4em 2.5em", },
+              icon: { props: { size: "1.1em" }, styles: { top: "0.2em" } },
+              button: { width: "80%", padding: "0.5em 1.5em 0.5em 3em", },
             }}
+            type="primary"
             onButtonClick={handleOnLocationClick}
             text="¿Cómo llegar?"
           />

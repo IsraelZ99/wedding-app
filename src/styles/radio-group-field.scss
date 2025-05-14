@@ -33,19 +33,19 @@
 
   .checked {
     label {
-      color: base-theme.$primaryColor;
+      color: base-theme.$secondaryColor;
       font-weight: 700;
     }
 
     .check {
-      border-color: base-theme.$primaryColor;
+      border-color: base-theme.$secondaryColor;
 
       .inside {
-        border: 3px solid base-theme.$primaryColor;
+        border: 3px solid base-theme.$thirdColor;
         border-radius: 100%;
         height: 0.7em;
         width: 0.7em;
-        background-color: base-theme.$primaryColor;
+        background-color: base-theme.$thirdColor;
       }
     }
   }
@@ -75,8 +75,9 @@
   height: 100%;
 
   li label {
-    margin: 0.4em 0 0.4em 0.8em;
+    margin: 0em 0 0em 0.8em;
     height: auto;
+    letter-spacing: 0.08rem;
   }
 
   .fake-input-container {

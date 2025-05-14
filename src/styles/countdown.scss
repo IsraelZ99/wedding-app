@@ -1,12 +1,12 @@
 @use "base-theme.module";
 
-$white: #f6f4f3;
-$dark: #183059;
+$white: base-theme.$whiteColor;
+$dark: #ffffff;
 
-$daysBackgroundColor: #ef2f3c;
-$hoursBackgroundColor: #f6f4f3;
-$minutesBackgroundColor: #276fbf;
-$secondsBackgroundColor: #f0a202;
+$daysBackgroundColor: base-theme.$secondaryColor;
+$hoursBackgroundColor: base-theme.$fifthColor;
+$minutesBackgroundColor: base-theme.$thirdColor;
+$secondsBackgroundColor: base-theme.$fourthColor;
 
 $star: polygon(
   50% 0%,
@@ -36,6 +36,7 @@ $star: polygon(
   text-transform: uppercase;
   font-size: 0.5em;
   font-family: base-theme.$primaryFontFamily;
+  font-weight: 600;
 }
 
 .countdown-days,
@@ -55,7 +56,11 @@ $star: polygon(
 
 .countdown-hours {
   background: $hoursBackgroundColor;
-  color: $dark;
+  color: base-theme.$blackColor;
+
+  .countdown-numbers {
+    color: base-theme.$blackColor;
+  }
 }
 
 .countdown-minutes {
@@ -64,6 +69,11 @@ $star: polygon(
 
 .countdown-seconds {
   background: $secondsBackgroundColor;
+  color: base-theme.$blackColor;
+
+  .countdown-numbers {
+    color: base-theme.$blackColor;
+  }
 }
 
 .countdown-numbers {

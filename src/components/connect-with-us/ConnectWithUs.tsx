@@ -19,7 +19,7 @@ const ConnectWithUs = () => {
   return (
     <div id="connect-with-us" className={className}>
       <section id="connect-with-us-phrase">
-        <p>"Somos estrellas que decidieron brillar en la misma noche"</p>
+        <p>"Nuestro amor florece donde el alma se siente en casa"</p>
       </section>
       <section id="connect-with-us-song">
         <AudioPlayer
@@ -30,7 +30,7 @@ const ConnectWithUs = () => {
           onPlaySong={hanldePlaySong}
           onStopSong={handlePauseSong}
         />
-        <p>Conecten un momento sus almas junto a las nuestras escuchando nuestra cancion.</p>
+        <p>Conecten un momento sus almas junto a las nuestras escuchando nuestra canción.</p>
       </section>
     </div>
   );

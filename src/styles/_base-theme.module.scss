@@ -12,18 +12,25 @@
 $primaryFontFamily: "Playfair Display";
 $secondaryFontFamily: "Baby Child";
 
-$primaryColor: rgb(99, 151, 151);
-$secondaryColor: rgb(233, 247, 250);
-$thirdColor: #d2d2d2;
-$buttonColor: #55acee;
-$whiteColor: #fff;
+$primaryColor: rgba(0, 128, 128, 1); //green
+$secondaryColor: rgba(48, 61, 96, 1); // strong blue
+$thirdColor: rgba(57, 90, 123, 1); // ocean blue
+$fourthColor: rgba(130, 194, 229, 1); // light blue
+$fifthColor: rgba(182, 215, 232, 1); // baby blue
+$fourthColorLighted: rgba(130, 194, 229, 0.241);
+$thirdColorLighted: rgba(57, 90, 123, 0.241);
+$whiteColor: #f8f1f1;
 $spinnerBackground: #181818;
 $blackColor: #1f1f1f;
 $grayColor: #252b32;
-
 :export {
   primary: $primaryColor;
+  secondary: $secondaryColor;
+  third: $thirdColor;
+  fourth: $fourthColor;
+  fifth: $fifthColor;
   white: $whiteColor;
   spinnerBackground: $spinnerBackground;
   black: $blackColor;
+  gray: $grayColor;
 }

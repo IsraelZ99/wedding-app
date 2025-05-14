@@ -33,7 +33,7 @@ dialog {
     flex: 2 auto;
     display: flex;
     flex-direction: row;
-    background-color: base-theme.$primaryColor;
+    background-color: base-theme.$thirdColor;
 
     .modal-header-text {
       flex: 11;
@@ -41,14 +41,14 @@ dialog {
       text-align: left;
       padding-left: 10%;
       font-size: 1.1rem;
-      color: #fff;
+      color: base-theme.$whiteColor;
     }
 
     .modal-header-close-container {
       flex: 1;
       border: 0;
       appearance: none;
-      background: base-theme.$primaryColor;
+      background: base-theme.$thirdColor;
       height: 60%;
       align-self: center;
     }
@@ -78,15 +78,15 @@ dialog {
       flex-direction: column;
       justify-content: center;
       height: 100%;
-      padding: 0 10%;
+      padding: 0 5%;
 
       .modal-footer-close-button {
-        border: 1px base-theme.$primaryColor solid;
-        border-radius: 5%;
-        height: 60%;
-        padding: 0 1em;
+        border: 0.18em base-theme.$fourthColor solid;
+        border-radius: 0.5em;
+        height: 65%;
+        padding: 0 1.5em;
         font-weight: 700;
-        color: base-theme.$primaryColor;
+        color: base-theme.$grayColor;
         appearance: none;
         background-color: transparent;
       }

@@ -19,7 +19,7 @@ const INVITATIONS = [
         wishes: "",
       },
       {
-        name: "Mitzi",
+        name: "Mitzy",
         wishes: "",
       },
       {
@@ -40,7 +40,7 @@ const INVITATIONS = [
         wishes: "",
       },
       {
-        name: "David",
+        name: "Iker",
         wishes: "",
       },
       {
@@ -95,7 +95,7 @@ const INVITATIONS = [
         wishes: "",
       },
       {
-        name: "Novio",
+        name: "Miguel",
         wishes: "",
       },
     ],
@@ -202,4 +202,94 @@ const INVITATIONS = [
   },
 ];
 
-export { INVITATIONS };
+const EXPRESS = [
+  {
+    guests: [
+      {
+        name: "Jaki",
+        wishes: "",
+      },
+    ],
+    isConfirmed: false,
+  },
+  {
+    guests: [
+      {
+        name: "Noé",
+        wishes: "",
+      },
+    ],
+    isConfirmed: false,
+  },
+  {
+    guests: [
+      {
+        name: "Maya",
+        wishes: "",
+      },
+      {
+        name: "Liliana",
+        wishes: "",
+      },
+    ],
+    isConfirmed: false,
+  },
+  {
+    guests: [
+      {
+        name: "Clarita",
+        wishes: "",
+      },
+      {
+        name: "Daniel",
+        wishes: "",
+      },
+      {
+        name: "Zoe",
+        wishes: "",
+      },
+    ],
+    isConfirmed: false,
+  },
+  {
+    guests: [
+      {
+        name: "Jesus",
+        wishes: "",
+      },
+      {
+        name: "Jair",
+        wishes: "",
+      },
+    ],
+    isConfirmed: false,
+  },
+  {
+    guests: [
+      {
+        name: "Brenda",
+        wishes: "",
+      },
+    ],
+    isConfirmed: false,
+  },
+  {
+    guests: [
+      {
+        name: "Anilu",
+        wishes: "",
+      },
+    ],
+    isConfirmed: false,
+  },
+  {
+    guests: [
+      {
+        name: "Lorena",
+        wishes: "",
+      },
+    ],
+    isConfirmed: false,
+  }
+];
+export { INVITATIONS, EXPRESS };
