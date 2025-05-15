@@ -92,7 +92,7 @@ export default function SwipperContainer() {
             >
               <SwiperSlide>
                 <SwiperSlideContent
-                  imageData={{ imageSrc: FOURH_IMAGE, altText: "MYTEXT" }}
+                  imageData={{ imageSrc: FOURH_IMAGE, altText: "Isra&Monse4" }}
                   component={{ isComponentAtTop: true }}
                 >
                   <Presentation />
@@ -100,7 +100,7 @@ export default function SwipperContainer() {
               </SwiperSlide>
               <SwiperSlide>
                 <SwiperSlideContent
-                  imageData={{ imageSrc: THIRD_IMAGE, altText: "MYTEXT" }}
+                  imageData={{ imageSrc: THIRD_IMAGE, altText: "Isra&Monse3" }}
                   component={{ isComponentAtTop: false }}
                 >
                   <ConnectWithUs />
@@ -108,7 +108,7 @@ export default function SwipperContainer() {
               </SwiperSlide>
               <SwiperSlide>
                 <SwiperSlideContent
-                  imageData={{ imageSrc: FIRST_IMAGE, altText: "MYTEXT" }}
+                  imageData={{ imageSrc: FIRST_IMAGE, altText: "Isra&Monse1" }}
                   component={{ isComponentAtTop: true }}
                 >
                   <EventInformation />
@@ -116,7 +116,7 @@ export default function SwipperContainer() {
               </SwiperSlide>
               <SwiperSlide>
                 <SwiperSlideContent
-                  imageData={{ imageSrc: FOURH_IMAGE, altText: "MYTEXT" }}
+                  imageData={{ imageSrc: FOURH_IMAGE, altText: "Isra&Monse4" }}
                   component={{ isComponentAtTop: true, isFull: true }}
                 >
                   <Itinerary />
@@ -124,7 +124,7 @@ export default function SwipperContainer() {
               </SwiperSlide>
               <SwiperSlide>
                 <SwiperSlideContent
-                  imageData={{ imageSrc: SECOND_IMAGE, altText: "MYTEXT" }}
+                  imageData={{ imageSrc: SECOND_IMAGE, altText: "Isra&Monse2" }}
                   component={{ isComponentAtTop: false }}
                 >
                   <AccessPass />
@@ -132,7 +132,7 @@ export default function SwipperContainer() {
               </SwiperSlide>
               <SwiperSlide>
                 <SwiperSlideContent
-                  imageData={{ imageSrc: FIFTH_IMAGE, altText: "MYTEXT" }}
+                  imageData={{ imageSrc: FIFTH_IMAGE, altText: "Isra&Monse5" }}
                   component={{ isComponentAtTop: true }}
                 >
                   <FormInput />
