@@ -20,7 +20,7 @@ const Itinerary: React.FC = () => {
     {
       id: 3,
       header: "Término",
-      instruction: "10:00 pm",
+      instruction: "11:00 pm",
       className: "ending",
     },
   ];
