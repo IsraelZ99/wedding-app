@@ -21,7 +21,7 @@ import theme from "../styles/_base-theme.module.scss";
 import "../styles/access-pass.scss";
 
 const AccessPass: React.FC = () => {
-  const deadline = new Date("2025-07-19T23:59:59");
+  const deadline = new Date("2025-08-09T23:59:59");
   // const deadline = new Date("2025-03-30T23:59:59");
   const { state, setInvitationStatus, setInvitationInformation } =
     useInvitationContext();
@@ -207,7 +207,7 @@ const AccessPass: React.FC = () => {
         {!showMessage && (
           <section id="access-pass-confirmation">
             <p>
-             Último dia para confirmar asistencia, <b>19 de julio del 2025.</b>
+             Último dia para confirmar asistencia, <b>09 de agosto del 2025.</b>
             </p>
             <Button onClick={handleModal}>{btnText}</Button>
           </section>
