@@ -1,9 +1,9 @@
 import { creationInviteInformation } from "../services/InvitationService";
-import { EXPRESS } from "../../__mocks__/data";
+import { EXPRESS_TWO } from "../../__mocks__/data";
 
 const InviteCreation: React.FC = () => {
   const hanldeUserCreation = async () => {
-    for (const invitation of EXPRESS) {
+    for (const invitation of EXPRESS_TWO) {
       await creationInviteInformation(invitation);
     }
   };

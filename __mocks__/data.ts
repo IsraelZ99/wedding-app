@@ -292,4 +292,35 @@ const EXPRESS = [
     isConfirmed: false,
   }
 ];
-export { INVITATIONS, EXPRESS };
+
+const EXPRESS_TWO = [
+  {
+    guests: [
+      {
+        name: "Gabriel",
+        wishes: "",
+      },
+    ],
+    isConfirmed: false,
+  },
+  {
+    guests: [
+      {
+        name: "Alberto",
+        wishes: "",
+      },
+    ],
+    isConfirmed: false,
+  },
+  {
+    guests: [
+      {
+        name: "Edgar",
+        wishes: "",
+      },
+    ],
+    isConfirmed: false,
+  },
+];
+
+export { INVITATIONS, EXPRESS_TWO };
